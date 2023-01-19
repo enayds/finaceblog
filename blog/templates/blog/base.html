@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/style.css'%}">
+    <title>My Finace Blog</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'blog_list' %}" class="navbar-link"> My Finacial Blog</a>
+            </div>
+            
+        </nav>
+    </header>
+    
+    {% block content %}
+    {% endblock content %}
+    <hr>
+    <h3>Footer section</h3>
+
+</body>
+</html>

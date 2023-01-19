@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="mugshot">
+                    <a href="#">
+                        <span>
+                            {{ blog.author.username}}
+                        </span>
+                    </a>
+                    <small>
+                        {{ blog.date_published|date:"d/m/Y h:i a"}}
+                    </small>
+                </div>
+                <div class="question-info">
+                    <h1>{{blog.title}}</h1>
+                </div>
+                <div class="content-div">
+                    <p>{{blog.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
